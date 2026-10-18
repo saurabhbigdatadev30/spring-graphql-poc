@@ -15,7 +15,8 @@ public class BookController {
     private final BookRepository bookRepository;
     private final AuthorRepository authorRepository;
 
-    public BookController(BookRepository bookRepository, AuthorRepository authorRepository) {
+    public BookController(BookRepository bookRepository,
+                          AuthorRepository authorRepository) {
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
     }

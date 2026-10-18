@@ -1,9 +1,15 @@
 # Operation Types: Query, Mutation, Subscription
+
+# Query - Read operations
+
+# When the client sends a query, it will be resolved by the corresponding resolver function on the server side.
+# The resolver function will fetch the data from the database or any other data source and return it to the client.
 type Query {
     books: [Book!]!
     book(id: Int!): Book!
 }
 
+# Mutation - Write operations
 type Mutation {
     addBook(bookInput: BookInput): Book!
 }
@@ -14,6 +20,7 @@ type Book {
     author: Author!
 }
 
+# Author has a one-to-many relationship with Book, [books] is a list of books written by the author
 type Author {
     id: ID!
     name: String!
